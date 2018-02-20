@@ -56,7 +56,9 @@ let decode = function(word) {
 
 			finalWord += wordList[i][4];
 
-		} 
+		} else {
+			finalWord += ' ';
+		}
 
 	}
 	
