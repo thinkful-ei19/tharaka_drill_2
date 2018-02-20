@@ -66,6 +66,41 @@ let decode = function(word) {
 
 
 
+let daysInMonth = function(month, leapYear) {
+	let result = '';
+
+	switch(month) {
+		case 'January':
+		case 'March':
+		case 'May':
+		case 'July':
+		case 'August':
+		case 'October':
+		case 'December':
+			result = `${month} has 31 days`;
+			break;
+		case 'April':
+		case 'June':
+		case 'September':
+		case 'November':
+			result = `${month} has 30 days`;
+			break;
+		case 'February':
+			if(leapYear) {
+				result = `${month} has 29 days`;
+			} else {
+				result = `${month} has 28 days`;
+			}
+			break;
+		default:
+			result = 'Must provide a valid month.';
+	}
+
+	return result;
+}
+
+
+
 
 
 
@@ -75,3 +110,5 @@ let decode = function(word) {
 let ans1 = jediName('thara', 'wije');
 let ans2 = beyond(0);
 let ans3 = decode('craft block argon meter bells brown croon droop');
+let ans4 = daysInMonth('February', true);
+
