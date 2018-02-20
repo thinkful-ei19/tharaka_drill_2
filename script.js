@@ -67,6 +67,7 @@ let decode = function(word) {
 
 
 let daysInMonth = function(month, leapYear) {
+
 	let result = '';
 
 	switch(month) {
@@ -101,6 +102,59 @@ let daysInMonth = function(month, leapYear) {
 
 
 
+let rockPaperScissors = function(num) {
+
+	const randomNo = Math.floor(Math.random() * 3) + 1;
+	let outcome = '';
+
+	switch(randomNo) {
+
+		case 1:
+			if(num === 1) {
+				outcome = 'The result is a tie';
+			} else if(num === 2) {
+				outcome = 'You won!'
+			} else if(num === 3) {
+				outcome = 'You lost'
+			} else {
+				outcome = 'Invalid number'
+			}
+
+			break;
+
+		case 2:
+			if(num === 1) {
+				outcome = 'You lost';
+			} else if(num === 2) {
+				outcome = 'The result is a tie'
+			} else if(num === 3) {
+				outcome = 'You won!'
+			} else {
+				outcome = 'Invalid number'
+			}
+
+			break;
+
+		case 3:
+			if(num === 1) {
+				outcome = 'You won!';
+			} else if(num === 2) {
+				outcome = 'You lost'
+			} else if(num === 3) {
+				outcome = 'The result is a tie'
+			} else {
+				outcome = 'Invalid number'
+			}
+
+			break;		
+
+	}
+
+	return outcome;
+}
+
+
+
 
 
 
@@ -111,4 +165,5 @@ let ans1 = jediName('thara', 'wije');
 let ans2 = beyond(0);
 let ans3 = decode('craft block argon meter bells brown croon droop');
 let ans4 = daysInMonth('February', true);
+let ans5 = rockPaperScissors(2);
 
